@@ -29,6 +29,6 @@ services:
       database:
         condition: service_healthy
     environment:
-      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:123456@host.docker.internal:5432/postgres
+      HASURA_GRAPHQL_DATABASE_URL: postgres://postgres:123456@database:5432/postgres
       HASURA_GRAPHQL_ENABLE_CONSOLE: "true"
       HASURA_GRAPHQL_DEV_MODE: "true"
