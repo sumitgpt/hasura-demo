@@ -2,6 +2,7 @@ version: "3.9"
 services:
   database:
     image: postgres:13.1-alpine
+    restart: always
     ports:
       - 5432:5432
     environment:
@@ -27,6 +28,7 @@ services:
     image: hasura/graphql-engine:v1.3.3
     ports:
       - 8080:8080
+    restart: always
     depends_on:
       database:
         condition: service_healthy

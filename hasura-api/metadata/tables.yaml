@@ -1,0 +1,17 @@
+- table:
+    schema: world
+    name: city
+- table:
+    schema: world
+    name: country
+  object_relationships:
+    - name: country_capital_mapping
+      using:
+        foreign_key_constraint_on: capital
+- table:
+    schema: world
+    name: countrylanguage
+  object_relationships:
+    - name: country_lang_mapping
+      using:
+        foreign_key_constraint_on: countrycode
